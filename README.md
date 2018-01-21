@@ -17,8 +17,13 @@ I have also looked around to see if any one else has done/used this method for s
 
 **Further Reading**
 http://alexanderyolkin.com/display-user-notification-cocoa/
+
 http://nshipster.com/method-swizzling/
+
 http://www.galloway.me.uk/2012/10/a-look-inside-blocks-episode-1/ 
+
 http://www.friday.com/bbum/2011/03/17/ios-4-3-imp_implementationwithblock/
+
 http://www.cocoawithlove.com/2008/02/imp-of-current-method.html
+
 https://blog.newrelic.com/2014/04/16/right-way-to-swizzle/
