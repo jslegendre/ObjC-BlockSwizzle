@@ -16,6 +16,7 @@ First off, I do not want to go into what is more "safe" or better as this was no
 I have also looked around to see if any one else has done/used this method for swizzling and could not find any results. This is either a really good thing or REALLY bad thing.  Take that information with you should you decide to use this in a project.
 
 **Further Reading**
+
 http://alexanderyolkin.com/display-user-notification-cocoa/
 
 http://nshipster.com/method-swizzling/
