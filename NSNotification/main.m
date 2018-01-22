@@ -19,20 +19,6 @@ int main(int argc, const char * argv[]) {
         n.informativeText = @"Informative Text";
         [defCenter deliverNotification:n];
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:3.0]];
-
-        
-        Method originalMethod = class_getInstanceMethod(object_getClass(defCenter),
-                                                        sel_registerName("_notificationClickedMessage:"));
-
-        CFURLRef iconPath = CFURLCreateWithString(NULL, CFSTR("/path/to/my/icon"), NULL);
-        class_replaceMethod(object_getClass(defCenter),
-                            sel_registerName("_notificationClickedMessage:"),
-                            imp_implementationWithBlock(^ {
-                                CFUserNotificationDisplayNotice(0, kCFUserNotificationPlainAlertLevel,
-                                            iconPath, NULL, NULL, CFSTR("Clicked!"),
-                                            CFSTR("Done with Private API Swizzeling"), CFSTR("OK"));
-                            }),
-                            method_getTypeEncoding(originalMethod));
     }
     
     return 0;
