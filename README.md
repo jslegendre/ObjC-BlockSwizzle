@@ -7,7 +7,7 @@ I was taking a look at some of the other projects here on github of the ways peo
 
 **How**
 
-I started out by stripping out everything I knew to be not completely necessary as well as consolodating as much as I could.  I eventually ended up with one "main" function and the method for the swizzle. Still not solving my originial problem... So I started reading anything I could find on the Objective-C runtime until I stumbled across "blocks". A block is essentially where the function the method is stored.  I will post some further reading that I used the bottom where the authors offer explanations in in much more detail than I could get into here. Using this information I was able to instead of swizzle and entire method, swizzle just the implemenation block of said method. 
+I started out by stripping out everything I knew to be not completely necessary as well as consolodating as much as I could.  I eventually ended up with one "main" function and the method for the swizzle. Still not solving my originial problem... So I started reading anything I could find on the Objective-C runtime until I stumbled across "blocks". A block is, as Apple puts it " a language-level feature added to C, Objective-C and C++, which allow you to create distinct segments of code that can be passed around to methods or functions as if they were values".  I will post some further reading that I used the bottom where the authors offer explanations in in much more detail than I could get into here. Using this information I was able to instead of swizzle and entire method, swizzle just the implemenation block of said method. 
 
 **Result**
 
@@ -16,6 +16,9 @@ First off, I do not want to go into what is more "safe" or better as this was no
 I have also looked around to see if any one else has done/used this method for swizzling and could not find any results. This is either a really good thing or REALLY bad thing.  Take that information with you should you decide to use this in a project.
 
 **Further Reading**
+https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithBlocks/WorkingwithBlocks.html
+
+https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/Blocks/Articles/00_Introduction.html#//apple_ref/doc/uid/TP40007502
 
 http://alexanderyolkin.com/display-user-notification-cocoa/
 
