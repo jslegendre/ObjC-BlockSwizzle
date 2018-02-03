@@ -1,4 +1,4 @@
-# ObjC-SimpleSwizzle
+# ObjC-BlockSwizzle
 A much smaller/streamlined way of method swizzling exampled by calling an NSUSerNotification from a CLI app.
 
 **Why?**
