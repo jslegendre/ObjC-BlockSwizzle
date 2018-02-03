@@ -7,7 +7,7 @@ I was taking a look at some of the other projects here on github of the ways peo
 
 **How**
 
-I started out by stripping out everything that I knew was not completely necessary and consolodating as much as I could.  I eventually ended up with one "main" function and the method for the swizzle. This still was not solving my problem but that was until I read about blocks. A block is essentially the function that the method points to I.E. the implementation.  I will post some further reading that I used the bottom where the authors offer explanations in in much more detail than I could get into here. Using this information I was able to instead of swizzle and entire method, swizzle just the implemenation block of said method. 
+I started out by stripping out everything I knew to be not completely necessary as well as consolodating as much as I could.  I eventually ended up with one "main" function and the method for the swizzle. Still not solving my originial problem... So I started reading anything I could find on the Objective-C runtime until I stumbled across "blocks". A block is essentially where the function the method is stored.  I will post some further reading that I used the bottom where the authors offer explanations in in much more detail than I could get into here. Using this information I was able to instead of swizzle and entire method, swizzle just the implemenation block of said method. 
 
 **Result**
 
