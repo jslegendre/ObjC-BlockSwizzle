@@ -9,9 +9,11 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
         Class bundle = objc_getClass("NSBundle");
-        class_replaceMethod(bundle, @selector(bundleIdentifier), imp_implementationWithBlock(^ {return @"com.apple.finder";}), NULL);
+        class_replaceMethod(bundle, @selector(bundleIdentifier), 
+            imp_implementationWithBlock(^ {
+                return @"com.apple.finder";
+            }), NULL);
         NSUserNotification *n = [[NSUserNotification alloc] init];
         n.title = @"Title";
         n.subtitle = @"Subtitle";
@@ -19,7 +21,6 @@ int main(int argc, const char * argv[]) {
         [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:n];
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
         
-    }
-    
+    }    
     return 0;
 }
