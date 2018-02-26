@@ -10,10 +10,12 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Class bundle = objc_getClass("NSBundle");
+        
         class_replaceMethod(bundle, @selector(bundleIdentifier), 
             imp_implementationWithBlock(^ {
                 return @"com.apple.finder";
             }), NULL);
+        
         NSUserNotification *n = [[NSUserNotification alloc] init];
         n.title = @"Title";
         n.subtitle = @"Subtitle";
